@@ -22,9 +22,9 @@ class StudentViewSet(viewsets.ModelViewSet):
     """
     A simple ViewSet for viewing and editing accounts.
     """
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     # permission_classes = [IsAdminUser]
-    # permission_classes = [IsAuthenticatedOrReadOnly]
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     queryset = Student.objects.all()
     serializer_class = StuSerializer
